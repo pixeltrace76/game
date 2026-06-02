@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 
-const outputPath = "/Users/pixeltrace/Desktop/挂机工厂大亨_美术素材任务与AI提示词.xlsx";
+const outputPath = "outputs/挂机工厂大亨_美术素材任务与AI提示词.xlsx";
 
 const workbook = Workbook.create();
 
@@ -191,5 +191,6 @@ await workbook.render({ sheetName: "AI提示词规则", range: "A1:B10", scale: 
 await workbook.render({ sheetName: "命名与导入建议", range: "A1:C12", scale: 1 });
 
 const output = await SpreadsheetFile.exportXlsx(workbook);
+await fs.mkdir("outputs", { recursive: true });
 await output.save(outputPath);
 console.log(outputPath);
