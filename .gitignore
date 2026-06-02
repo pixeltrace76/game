@@ -1,0 +1,7 @@
+# Codex workspace folders
+work/
+outputs/
+
+# macOS
+.DS_Store
+
