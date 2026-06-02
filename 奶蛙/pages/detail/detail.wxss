@@ -1,0 +1,85 @@
+.poster {
+  min-height: 660rpx;
+  padding: 72rpx 34rpx 44rpx;
+  text-align: center;
+}
+
+.poster .frog {
+  width: 260rpx;
+  height: 210rpx;
+  transform: scale(1.08);
+}
+
+.detail-image {
+  display: block;
+  width: 360rpx;
+  height: 300rpx;
+  margin: 0 auto;
+}
+
+.poster .frog::before,
+.poster .frog::after {
+  width: 96rpx;
+  height: 94rpx;
+  top: -36rpx;
+}
+
+.poster .eye {
+  top: -8rpx;
+}
+
+.poster .eye-left {
+  left: 70rpx;
+}
+
+.poster .eye-right {
+  right: 70rpx;
+}
+
+.poster-text {
+  margin-top: 64rpx;
+  font-size: 54rpx;
+}
+
+.poster-action {
+  display: block;
+  margin: 24rpx auto 0;
+  max-width: 500rpx;
+  color: #6a725d;
+  font-size: 28rpx;
+  line-height: 1.55;
+}
+
+.detail-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26rpx 4rpx 18rpx;
+}
+
+.detail-title {
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.detail-tag {
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  color: #2f8f45;
+  background: #e9ffd9;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.button-stack {
+  display: grid;
+  gap: 18rpx;
+}
+
+.poster-canvas {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  width: 360px;
+  height: 360px;
+}

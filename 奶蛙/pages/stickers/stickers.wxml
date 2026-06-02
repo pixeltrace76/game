@@ -1,0 +1,29 @@
+<view class="page stickers-page">
+  <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <block wx:for="{{categories}}" wx:key="key">
+      <button class="category-pill {{activeCategory === item.key ? 'active' : ''}}" data-key="{{item.key}}" bindtap="changeCategory">
+        {{item.name}}
+      </button>
+    </block>
+  </scroll-view>
+
+  <view class="sticker-grid">
+    <block wx:for="{{displayStickers}}" wx:key="id">
+      <button class="sticker-card soft-card" data-id="{{item.id}}" bindtap="openDetail">
+        <image wx:if="{{item.useAsset}}" class="frog-image" src="{{item.asset}}" mode="aspectFit"></image>
+        <view wx:else class="frog {{item.face}}">
+          <view class="eye eye-left"></view>
+          <view class="eye eye-right"></view>
+          <view class="cheek cheek-left"></view>
+          <view class="cheek cheek-right"></view>
+          <view class="mouth"></view>
+        </view>
+        <text class="sticker-text">{{item.text}}</text>
+        <view class="meta-row">
+          <text>{{item.title}}</text>
+          <text>{{item.tag}}</text>
+        </view>
+      </button>
+    </block>
+  </view>
+</view>

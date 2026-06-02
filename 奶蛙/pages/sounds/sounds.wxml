@@ -1,0 +1,23 @@
+<view class="page sounds-page">
+  <view class="sound-hero soft-card">
+    <view class="frog face-laugh">
+      <view class="eye eye-left"></view>
+      <view class="eye eye-right"></view>
+      <view class="cheek cheek-left"></view>
+      <view class="cheek cheek-right"></view>
+      <view class="mouth"></view>
+    </view>
+    <text class="sound-title">点一下，奶蛙开嗓</text>
+    <text class="sound-subtitle">大笑、舞动、破防、晚安，都在这里</text>
+  </view>
+
+  <view class="sound-grid">
+    <block wx:for="{{sounds}}" wx:key="id">
+      <button class="sound-card soft-card {{playingId === item.id ? 'playing' : ''}}" data-id="{{item.id}}" bindtap="playSound">
+        <text class="sound-name">{{item.name}}</text>
+        <text class="sound-text">{{item.text}}</text>
+        <text class="sound-mood">{{item.mood}}</text>
+      </button>
+    </block>
+  </view>
+</view>

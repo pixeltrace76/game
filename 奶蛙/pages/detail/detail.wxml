@@ -1,0 +1,27 @@
+<view class="page detail-page" wx:if="{{sticker}}">
+  <view class="poster soft-card">
+    <image wx:if="{{sticker.useAsset}}" class="detail-image" src="{{sticker.asset}}" mode="aspectFit"></image>
+    <view wx:else class="frog {{sticker.face}}">
+      <view class="eye eye-left"></view>
+      <view class="eye eye-right"></view>
+      <view class="cheek cheek-left"></view>
+      <view class="cheek cheek-right"></view>
+      <view class="mouth"></view>
+    </view>
+    <text class="sticker-text poster-text">{{sticker.text}}</text>
+    <text class="poster-action">{{sticker.action}}</text>
+  </view>
+
+  <view class="detail-info">
+    <text class="detail-title">{{sticker.title}}</text>
+    <text class="detail-tag">{{sticker.tag}}</text>
+  </view>
+
+  <view class="button-stack">
+    <button class="primary-button" bindtap="savePoster">保存奶蛙图</button>
+    <button class="ghost-button" bindtap="toggleFavorite">{{favoriteText}}</button>
+    <button class="ghost-button" open-type="share">转发给朋友</button>
+  </view>
+
+  <canvas canvas-id="posterCanvas" class="poster-canvas"></canvas>
+</view>

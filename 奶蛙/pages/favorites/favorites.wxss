@@ -1,0 +1,48 @@
+.empty {
+  margin-top: 16rpx;
+}
+
+.empty .frog {
+  transform: scale(0.9);
+  transform-origin: center top;
+}
+
+.empty-button {
+  width: 260rpx;
+  margin: 34rpx auto 0;
+}
+
+.favorite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18rpx;
+}
+
+.favorite-card {
+  overflow: hidden;
+}
+
+.favorite-main {
+  width: 100%;
+  min-height: 306rpx;
+  padding: 24rpx 16rpx 10rpx;
+}
+
+.favorite-main .frog {
+  transform: scale(0.8);
+  transform-origin: center top;
+}
+
+.favorite-main .sticker-text {
+  margin-top: -14rpx;
+  font-size: 30rpx;
+}
+
+.remove-button {
+  width: 100%;
+  height: 72rpx;
+  color: #6a725d;
+  background: #f2f7eb;
+  font-size: 25rpx;
+  font-weight: 800;
+}

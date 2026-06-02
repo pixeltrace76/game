@@ -1,0 +1,33 @@
+<view class="page favorites-page">
+  <view wx:if="{{favorites.length === 0}}" class="empty soft-card">
+    <view class="frog face-cry">
+      <view class="eye eye-left"></view>
+      <view class="eye eye-right"></view>
+      <view class="cheek cheek-left"></view>
+      <view class="cheek cheek-right"></view>
+      <view class="mouth"></view>
+    </view>
+    <text class="empty-title">这里还没有蛙</text>
+    <text class="empty-tip">去表情页收藏几只魔性奶蛙</text>
+    <button class="primary-button empty-button" bindtap="goStickers">去收藏</button>
+  </view>
+
+  <view wx:else class="favorite-grid">
+    <block wx:for="{{favorites}}" wx:key="id">
+      <view class="favorite-card soft-card">
+        <button class="favorite-main" data-id="{{item.id}}" bindtap="openDetail">
+          <image wx:if="{{item.useAsset}}" class="frog-image" src="{{item.asset}}" mode="aspectFit"></image>
+          <view wx:else class="frog {{item.face}}">
+            <view class="eye eye-left"></view>
+            <view class="eye eye-right"></view>
+            <view class="cheek cheek-left"></view>
+            <view class="cheek cheek-right"></view>
+            <view class="mouth"></view>
+          </view>
+          <text class="sticker-text">{{item.text}}</text>
+        </button>
+        <button class="remove-button" data-id="{{item.id}}" bindtap="removeFavorite">移除</button>
+      </view>
+    </block>
+  </view>
+</view>

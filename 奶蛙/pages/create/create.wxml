@@ -1,0 +1,35 @@
+<view class="page create-page">
+  <view class="creator-preview soft-card">
+    <view class="frog {{currentFace}}">
+      <view class="eye eye-left"></view>
+      <view class="eye eye-right"></view>
+      <view class="cheek cheek-left"></view>
+      <view class="cheek cheek-right"></view>
+      <view class="mouth"></view>
+    </view>
+    <text class="sticker-text preview-text">{{text || '蛙不理解'}}</text>
+  </view>
+
+  <view class="form-block">
+    <text class="field-label">奶蛙配字</text>
+    <input class="text-input" maxlength="12" value="{{text}}" placeholder="输入一句魔性短句" bindinput="onInput" />
+  </view>
+
+  <view class="form-block">
+    <text class="field-label">奶蛙表情</text>
+    <view class="mood-grid">
+      <block wx:for="{{moods}}" wx:key="face">
+        <button class="mood-pill {{currentFace === item.face ? 'active' : ''}}" data-face="{{item.face}}" bindtap="changeMood">
+          {{item.name}}
+        </button>
+      </block>
+    </view>
+  </view>
+
+  <view class="button-stack">
+    <button class="primary-button" bindtap="randomText">随机一句</button>
+    <button class="ghost-button" bindtap="savePoster">保存生成图</button>
+  </view>
+
+  <canvas canvas-id="createCanvas" class="poster-canvas"></canvas>
+</view>

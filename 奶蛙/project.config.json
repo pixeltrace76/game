@@ -1,0 +1,96 @@
+{
+  "description": "奶蛙魔性表情包微信小程序",
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "assets/idle-frames",
+        "type": "folder"
+      },
+      {
+        "value": "assets/idle.mp4",
+        "type": "file"
+      },
+      {
+        "value": "assets/idle-poster.jpg",
+        "type": "file"
+      },
+      {
+        "value": "assets/laugh-preview.jpg",
+        "type": "file"
+      },
+      {
+        "value": "assets/naiwa.jpg",
+        "type": "file"
+      },
+      {
+        "value": "assets/stickers",
+        "type": "folder"
+      },
+      {
+        "value": "assets/sounds/README.md",
+        "type": "file"
+      },
+      {
+        "value": "pages/create",
+        "type": "folder"
+      },
+      {
+        "value": "pages/detail",
+        "type": "folder"
+      },
+      {
+        "value": "pages/favorites",
+        "type": "folder"
+      },
+      {
+        "value": "pages/sounds",
+        "type": "folder"
+      },
+      {
+        "value": "pages/stickers",
+        "type": "folder"
+      },
+      {
+        "value": "utils",
+        "type": "folder"
+      },
+      {
+        "value": "README.md",
+        "type": "file"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.15.1",
+  "appid": "wxb179ad4f762936d4",
+  "projectname": "milk-frog-miniapp",
+  "condition": {},
+  "simulatorPluginLibVersion": {},
+  "editorSetting": {}
+}

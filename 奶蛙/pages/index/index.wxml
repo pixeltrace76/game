@@ -1,0 +1,41 @@
+<view class="page home" bindtap="handleBlankTap">
+  <view class="stage {{playing ? 'is-playing' : ''}}">
+    <image
+      wx:if="{{!playing}}"
+      class="naiwa-idle"
+      src="{{idleGif}}"
+      mode="aspectFit"
+    ></image>
+    <view wx:else class="laugh-frame">
+      <image class="naiwa-laugh" src="{{laughGif}}" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <view class="timer-panel" catchtap="noop">
+    <picker-view class="timer-picker {{pickerMoving ? 'is-moving' : ''}}" value="{{pickerValue}}" indicator-class="picker-indicator" bindchange="onPickerChange" bindpickstart="onPickStart" bindpickend="onPickEnd">
+      <picker-view-column>
+        <view class="picker-item {{pickerValue[0] === index ? 'active' : ''}}" wx:for="{{hours}}" wx:for-index="index" wx:key="*this">
+          <text class="picker-number">{{item}}</text>
+          <text class="picker-unit">时</text>
+        </view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="picker-item {{pickerValue[1] === index ? 'active' : ''}}" wx:for="{{minutes}}" wx:for-index="index" wx:key="*this">
+          <text class="picker-number">{{item}}</text>
+          <text class="picker-unit">分</text>
+        </view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="picker-item {{pickerValue[2] === index ? 'active' : ''}}" wx:for="{{seconds}}" wx:for-index="index" wx:key="*this">
+          <text class="picker-number">{{item}}</text>
+          <text class="picker-unit">秒</text>
+        </view>
+      </picker-view-column>
+    </picker-view>
+    <view wx:if="{{counting || playing}}" class="picker-lock" catchtouchstart="noop" catchtouchmove="noop" catchtouchend="noop" catchtap="noop"></view>
+
+    <button class="timer-button {{counting ? 'counting' : ''}}" catchtap="handleTimerTap">
+      {{buttonText}}
+    </button>
+  </view>
+</view>

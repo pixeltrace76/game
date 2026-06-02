@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "奶蛙",
+    "navigationBarBackgroundColor": "#FCFCFC",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FCFCFC",
+    "backgroundTextStyle": "dark"
+  },
+  "sitemapLocation": "sitemap.json"
+}
