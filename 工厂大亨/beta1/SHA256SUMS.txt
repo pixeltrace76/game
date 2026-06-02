@@ -1,0 +1,2 @@
+3ae2e6cc2aa0b374f4bd2077cda7e751afc78f247cc0e28db7f73e119e0b1fa3  IdleFactoryTycoon_Beta_v0.1.0_macOS.zip
+20d94e78135dde85ab097aaaad34cbb8a9295f9c09a1593d0f98fa8fecfc04b2  IdleFactoryTycoon_Beta_v0.1.0_windows_x64.zip

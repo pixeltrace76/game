@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Godot generated cache
+.godot/
+
+# Local user data and logs
+user://
+*.log
+
+# Export/build outputs
+build/
+dist/
+exports/
+beta/
+beta_github_release/
+*.app/
+*.exe
+*.zip
+*.pck
+
+# External runtime dependencies not used by the Godot project
+node_modules/
+
+# Temporary/generated checks
+work/*.log
