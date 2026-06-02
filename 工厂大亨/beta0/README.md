@@ -30,6 +30,15 @@
 /path/to/Godot --headless --path . --check-only --script res://scripts/main.gd
 ```
 
+## 直接游玩
+
+如果只是想体验游戏，不需要安装 Godot，也不需要自己导出。
+
+上一级目录中的 `beta1` 文件夹是已经导出好的可玩版本，按你的系统下载对应文件即可打开游玩：
+
+- macOS：[`IdleFactoryTycoon_Beta_v0.1.0_macOS.zip`](../beta1/IdleFactoryTycoon_Beta_v0.1.0_macOS.zip)
+- Windows：[`IdleFactoryTycoon_Beta_v0.1.0_windows_x64.zip`](../beta1/IdleFactoryTycoon_Beta_v0.1.0_windows_x64.zip)
+
 ## 导出
 
 项目已包含 `export_presets.cfg`，当前预设：
